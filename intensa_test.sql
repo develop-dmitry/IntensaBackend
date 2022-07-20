@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 20 2022 г., 13:27
+-- Время создания: Июл 20 2022 г., 14:00
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -38,7 +38,8 @@ CREATE TABLE `links` (
 --
 
 INSERT INTO `links` (`id`, `full_link`, `short_link`) VALUES
-(13, 'google.com', '93f');
+(21, 'https://google.com', '4c8'),
+(22, 'https://www.blog.google/products/news/news-showcase-uk-growth/', 'a8b');
 
 --
 -- Индексы сохранённых таблиц
@@ -58,7 +59,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT для таблицы `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

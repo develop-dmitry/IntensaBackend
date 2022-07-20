@@ -8,6 +8,7 @@ function ShortForm(form) {
 ShortForm.prototype = {
 	submit: function () {
 		let object = this;
+		object.hideMessage();
 		$.ajax({
 			url: "/ajax.php",
 			method: "post",
@@ -36,7 +37,11 @@ ShortForm.prototype = {
 			$(this.form).find("input[type=submit]").addClass("disabled");
 	},
 
-	showMessage: function(message) {
+	showMessage: function (message) {
 		$(this.form).find(".form-result").html(message).slideDown(200);
+	},
+
+	hideMessage: function () {
+		$(this.form).find(".form-result").hide();
 	}
 }
